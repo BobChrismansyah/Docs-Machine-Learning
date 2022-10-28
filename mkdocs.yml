@@ -1,11 +1,14 @@
-site_name: My Docs
+site_name: Machine Learning
+site_url: https://bobchrismansyah.github.io/Docs-Machine-Learning/
 
-site_name: MkLorum
-site_url: https://example.com/
 nav:
     - Home: index.md
     - About: about.md
-repo_name: https://github.com/BobChrismansyah/machine-learning
+    - Belajar: 
+        - Pandas: MachineLearning/Pandas/dasar-dasar-pandas.md
+        - Neural Network: MachineLearning/Neural Network/neural-network.md
+        
+repo_name: https://bobchrismansyah.github.io/Docs-Machine-Learning/
 
 theme: material
 
@@ -56,3 +59,4 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+
