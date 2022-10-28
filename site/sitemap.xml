@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://example.com/</loc>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://example.com/MachineLearning/Pandas/Dasar-Dasar%20Pandas/</loc>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Neural%20Network/neural-network/</loc>
+         <lastmod>2022-10-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Pandas/dasar-dasar-pandas/</loc>
          <lastmod>2022-10-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
