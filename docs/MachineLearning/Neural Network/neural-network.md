@@ -14,7 +14,7 @@ flowchart LR
     id1 --> id3[Hidden Layer]
     id1 --> id4[Output Layer]
     
-    subgraph input layer
+    subgraph Input Layer
     id2((X1))
     id3((X2))
     id4((X3))
@@ -27,7 +27,7 @@ flowchart LR
     id4 --> id5
     id4 --> id6
 
-    subgraph hidden layer
+    subgraph Hidden Layer
     id5((H1))
     id6((H2))
     end
@@ -47,4 +47,14 @@ Jumlah _Hiden Layer_ bergantung pada seberapa kopmleks pembelajaran yang mau dit
 
 #### Cara Membangun Model MLP
 
-MLP adalah metode _supervised learning_ oleh sebab itu membutuhkan label di _training dataset_. Langkah selanjutnyta adalah melakukan _training_ dengan mekanisme interatif yang disebut dengan **_backpropagation_**.  
+MLP adalah metode _supervised learning_ oleh sebab itu membutuhkan label di _training dataset_. Langkah selanjutnyta adalah melakukan _training_ dengan mekanisme interatif yang disebut dengan **_backpropagation_**, yang bisa dianalogikan proses bejalar dari kesalahan. Proses _backpropagation_ akan menghitung _error_ dari setiap _node_ dan mengubah bobot dari setiap _node_ agar _error_ semakin kecil. Proses _backpropagation_ akan berhenti jika _error_ sudah sangat kecil atau sudah mencapai batas maksimal iterasi yang ditentukan.
+
+#### Contoh Implementasi MLP
+Penggunaan MLP dengan menggunakan library scikit-learn. Berikut adalah contoh implementasi MLP dengan menggunakan library scikit-learn.
+
+```python
+from sklearn.neural_network import MLPClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+```
+Metode ini bisa digunakan untuk klasifikasi dan regresi. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi _logistic_ untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi _identity_ untuk output layer. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi _logistic_ untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi _identity_ untuk output layer.
