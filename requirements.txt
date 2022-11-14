@@ -1,0 +1,13 @@
+jinja2
+markdown
+mkdocs
+mkdocs-material-extensions
+pygments
+pymdown-extensions
+material
+mkdocs-git-committers-plugin-2
+mkdocs-git-revision-date-localized-plugin
+mkdocs-minify-plugin
+mkdocs-redirects
+mkdocs-git-authors-plugin
+lxml
