@@ -2,17 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/</loc>
-         <lastmod>2022-10-28</lastmod>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Churn%20Prediction/churn-prediction/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Clustering/clustering/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Decision%20Tree/decision-tree/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Logistic%20Regression/Linear_Regression/</loc>
+         <lastmod>2022-11-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Naive%20Bayes/naive-bayes/</loc>
+         <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Neural%20Network/neural-network/</loc>
-         <lastmod>2022-10-28</lastmod>
+         <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bobchrismansyah.github.io/Docs-Machine-Learning/MachineLearning/Pandas/dasar-dasar-pandas/</loc>
-         <lastmod>2022-10-28</lastmod>
+         <lastmod>2022-11-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

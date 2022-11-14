@@ -286,8 +286,35 @@
       
         <li class="md-nav__item">
   <a href="#neural-network" class="md-nav__link">
-    neural network
+    Neural network
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-layer-perceptron" class="md-nav__link">
+    Multi Layer Perceptron
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi Layer Perceptron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara-membangun-model-mlp" class="md-nav__link">
+    Cara Membangun Model MLP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-implementasi-mlp" class="md-nav__link">
+    Contoh Implementasi MLP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -332,8 +359,35 @@
       
         <li class="md-nav__item">
   <a href="#neural-network" class="md-nav__link">
-    neural network
+    Neural network
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-layer-perceptron" class="md-nav__link">
+    Multi Layer Perceptron
+  </a>
+  
+    <nav class="md-nav" aria-label="Multi Layer Perceptron">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cara-membangun-model-mlp" class="md-nav__link">
+    Cara Membangun Model MLP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contoh-implementasi-mlp" class="md-nav__link">
+    Contoh Implementasi MLP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -354,7 +408,56 @@
 
   <h1>Neural Network</h1>
 
-<h3 id="neural-network">neural network<a class="headerlink" href="#neural-network" title="Permanent link">&para;</a></h3>
+<h3 id="neural-network">Neural network<a class="headerlink" href="#neural-network" title="Permanent link">&para;</a></h3>
+<h2 id="multi-layer-perceptron">Multi Layer Perceptron<a class="headerlink" href="#multi-layer-perceptron" title="Permanent link">&para;</a></h2>
+<p>Multi layer perception adalah salah satu jenis neural network yang paling umum digunakan. Multi layer perception terdiri dari 3 layer, yaitu input layer, hidden layer, dan output layer. Input layer merupakan layer pertama yang menerima input dari data. Hidden layer merupakan layer yang berada di tengah-tengah antara input layer dan output layer. Output layer merupakan layer terakhir yang menghasilkan output dari data.
+Yang perlu diperhatikan adalah setiap <em>node</em> dalam dsatu lapisan akan tersambung secara penuh ke semua node di lapisan berikutnya. Informasi yang mengalir dalam satu arah yaitu dari kiri ke kanan yang disebut dengan jaringan <strong><em>feedforward</em></strong>. Hubungan antara <em>node</em> juga akan diberikan angka bobot masing-masing yang menentukan seberapa penting <em>feature</em> yang bersangkutan.
+Jika ada 10 feature maka akan ada 10 input node.</p>
+<p>Multi Layer Perceptron:</p>
+<p><pre class="mermaid"><code>flowchart LR
+    id1[(Data)] --&gt; id2[Input Layer]
+    id1 --&gt; id3[Hidden Layer]
+    id1 --&gt; id4[Output Layer]
+
+    subgraph Input Layer
+    id2((X1))
+    id3((X2))
+    id4((X3))
+    end
+
+    id2 --&gt; id5
+    id2 --&gt; id6
+    id3 --&gt; id5
+    id3 --&gt; id6
+    id4 --&gt; id5
+    id4 --&gt; id6
+
+    subgraph Hidden Layer
+    id5((H1))
+    id6((H2))
+    end
+
+    id5 --&gt; id7
+    id6 --&gt; id7
+
+    subgraph Output Layer
+    id7((Y))
+    end
+
+    id7 --&gt; output</code></pre>
+Jumlah <em>Hiden Layer</em> bergantung pada seberapa kopmleks pembelajaran yang mau ditentukan. Semakin kompleks pembelajaran maka semakin banyak <em>hidden layer</em> yang dibutuhkan. Jumlah <em>hidden layer</em> juga bergantung pada jumlah <em>node</em> yang ada di dalamnya. Semakin banyak <em>node</em> maka semakin kompleks pembelajaran yang bisa dilakukan. Jumlah <em>node</em> juga bergantung pada jumlah <em>feature</em> yang ada. Semakin banyak <em>feature</em> maka semakin banyak <em>node</em> yang dibutuhkan. Jumlah <em>node</em> juga bergantung pada jumlah <em>output</em> yang diinginkan. Semakin banyak <em>output</em> yang diinginkan maka semakin banyak <em>node</em> yang dibutuhkan.</p>
+<blockquote>
+<p>Deep Learning menggunakan Multi Layer Perceptron dengan jumlah <em>hidden layer</em> yang sangat banyak. Jumlah <em>hidden layer</em> yang banyak akan membuat pembelajaran menjadi lebih kompleks. Semakin kompleks pembelajaran maka semakin baik hasil prediksi yang dihasilkan.</p>
+</blockquote>
+<h4 id="cara-membangun-model-mlp">Cara Membangun Model MLP<a class="headerlink" href="#cara-membangun-model-mlp" title="Permanent link">&para;</a></h4>
+<p>MLP adalah metode <em>supervised learning</em> oleh sebab itu membutuhkan label di <em>training dataset</em>. Langkah selanjutnyta adalah melakukan <em>training</em> dengan mekanisme interatif yang disebut dengan <strong><em>backpropagation</em></strong>, yang bisa dianalogikan proses bejalar dari kesalahan. Proses <em>backpropagation</em> akan menghitung <em>error</em> dari setiap <em>node</em> dan mengubah bobot dari setiap <em>node</em> agar <em>error</em> semakin kecil. Proses <em>backpropagation</em> akan berhenti jika <em>error</em> sudah sangat kecil atau sudah mencapai batas maksimal iterasi yang ditentukan.</p>
+<h4 id="contoh-implementasi-mlp">Contoh Implementasi MLP<a class="headerlink" href="#contoh-implementasi-mlp" title="Permanent link">&para;</a></h4>
+<p>Penggunaan MLP dengan menggunakan library scikit-learn. Berikut adalah contoh implementasi MLP dengan menggunakan library scikit-learn.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">sklearn.neural_network</span> <span class="kn">import</span> <span class="n">MLPClassifier</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+</code></pre></div>
+Metode ini bisa digunakan untuk klasifikasi dan regresi. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi <em>logistic</em> untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi <em>identity</em> untuk output layer. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi <em>logistic</em> untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi <em>identity</em> untuk output layer.</p>
 
 
 
