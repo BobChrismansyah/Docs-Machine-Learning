@@ -10,3 +10,8 @@ Dokumentasi ini dibuat dari hasil Googling, Github AI, dan [buku](linkurl) penge
 Jika menemukan kesalahan dalam penulisan kata atau ingin menambahkan konten baru, silahkan buat perubahan. Anda juga bisa menggunakan tombol dibagian kanan atas di setiap artikel/konten untuk menambahkan ke pull request. Jika tidak tau apa maksudnya, anda juga bisa membuat issue atau kirim email.
 
 #### Terima Kasih
+
+Contributor:
+<a href="https://github.com/BobChrismansyah/Docs-Machine-Learning/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=BobChrismansyah/Docs-Machine-Learning" />
+</a>
