@@ -146,5 +146,19 @@ Hasil yang lebih tinggi bisa didapatkan dengan menambahkan _hidden layer_ dan it
 
 Untuk mengurangi model _overvit_, kita harus memastikan _training dataset_ kita cukup besar dan membatasi jumlah _hidden layer_.
 
+Ada beberapa pilihan _activation function_ yang bisa kita gunakan, yaitu _identity_, _logistic_, _tanh_, dan _relu_. Contohnya:
 
 ```python
+from sklearn.neural_network import MLPClassifier
+mlp = ann.MLPClassifier(hidden_layer_sizes=(3), max_iter=5, activation='logistic')
+```
+
+Setelah model terbentuk, kita bisa mengecek bobot dari setiap _hidden layer_ dan _output layer_ dengan menggunakan fungsi _coef_.
+
+```python
+print(mlp.coefs_)
+```
+
+![coefs](coefs.png "mlp.coefs_")
+
+Kekurangan model MLP adalah sulit untuk membaca hasilnya, angka-angka bobot di atas tidak bisa langsung menunjukan _feature_ mana yang lebih penting dibandingkan dengan _feature_ lainnya.
