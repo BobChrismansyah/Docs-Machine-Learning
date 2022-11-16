@@ -55,9 +55,44 @@ Penggunaan MLP dengan menggunakan library scikit-learn. Berikut adalah contoh im
 
 ```python
 from sklearn.neural_network import MLPClassifier
-from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 ```
 
 Metode ini bisa digunakan untuk klasifikasi dan regresi. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi _logistic_ untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi _identity_ untuk output layer. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi _logistic_ untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi _identity_ untuk output layer.
 
+![occupancy.csv](occupancy.png "Occupancy")
+
+Import semua modul yang kita perlukan seperti Pandaas, Neural Network dan model_selection
+
+```python
+import pandas as pd
+import sklearn.neural_network as ann
+import sklearn.model_selection as ms
+df_occupancy = pd.read_csv('datatraining.csv', 
+header=0, names = ["id", "date", "Temperature", 
+"Humadity", "Light", "CO2", "HumadityRatio", "Occupancy"])
+```
+
+Kemudian buang  id dan date karena tidak diperlukan untuk proses training
+
+```python
+X = df_occupancy.drop (['id', 'date'],axis=1)
+y = df_occupancy['Occupancy']
+```
+
+kemudian dilakukan profiling singkat dari kelima feature tersebut
+    
+```python
+X.describe()
+```
+
+![occupancy](describe_occupancy.png "Occupancy")
+
+Ada 8.143 baris data, perbedaan antara nilai maksimum dan minimum cukup besar, misalnya suhu dari 19 hingga 23, cahaya  memiliki jangkauan dari nol hingga 1.546 sehinga perbedaannya cukup besar, sedangkan MLP sangat sensitif terhadap dengan perbedaan seperti ini (lain halnya dengan algoritma Decision Tree atau Naive Bayes). Untuk itu, kita perlu melakukan normalisasi terhadap data-data tersebut.
+
+Sebelum proses training dilakukan, kita perlu membagi data menjadi dua bagian, yaitu data training dan data testing. Data training digunakan untuk proses training, sedangkan data testing digunakan untuk menguji akurasi dari model yang kita buat. Untuk membagi data, kita bisa menggunakan fungsi train_test_split dari modul model_selection yang sudah kita import sebelumnya.
+
+```python
+X_train, X_test, y_train, y_test = ms.train_test_split(X, y, test_size=0.2)
+X_train.count()
+```
