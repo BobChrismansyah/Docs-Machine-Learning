@@ -90,9 +90,61 @@ X.describe()
 
 Ada 8.143 baris data, perbedaan antara nilai maksimum dan minimum cukup besar, misalnya suhu dari 19 hingga 23, cahaya  memiliki jangkauan dari nol hingga 1.546 sehinga perbedaannya cukup besar, sedangkan MLP sangat sensitif terhadap dengan perbedaan seperti ini (lain halnya dengan algoritma Decision Tree atau Naive Bayes). Untuk itu, kita perlu melakukan normalisasi terhadap data-data tersebut.
 
+#### Split Data
 Sebelum proses training dilakukan, kita perlu membagi data menjadi dua bagian, yaitu data training dan data testing. Data training digunakan untuk proses training, sedangkan data testing digunakan untuk menguji akurasi dari model yang kita buat. Untuk membagi data, kita bisa menggunakan fungsi train_test_split dari modul model_selection yang sudah kita import sebelumnya.
 
 ```python
 X_train, X_test, y_train, y_test = ms.train_test_split(X, y, test_size=0.2)
 X_train.count()
 ```
+
+![baris data](baris_data.png "Baris Data")
+
+#### Normalisasi Data
+
+Selanjutnya, kita perlu melakukan normalisasi terhadap data-data tersebut. Scikit menyediakan sklearn.preprocessing.MinMaxScaler untuk melakukan normalisasi. Training dataset sekarang jangkauan angkanya hanya dari sekitar negatif 2 hingga positif 7
+
+```python
+print(X_train.min())
+print(X_train.max())
+```
+
+```text
+-1.6244629234944807
+7.290207701659988
+```
+
+#### Training Model
+
+MLPClassifier memerukan dua parameter penting, yaitu _hidden layer_ dan jumlah maksimal iterasi. Untuk parameter _hidden layer_, kita bisa menentukan sendiri berapa banyak _hidden layer_ yang kita inginkan., jadi diawali dengan angka acat yaitu tida _node_ di _hidden layer_ dan lima kali iterasi maksimal:
+
+```python
+mlp = ann.MLPClassifier(hidden_layer_sizes=(3), max_iter=5)
+mlp.fit(X_train, y_train)
+```
+
+Model sudah terbentuk dan bisa diuji dengan data testing. Untuk menguji akurasi dari model, kita bisa menggunakan fungsi score dari model yang sudah kita buat.
+
+Hasil prediksi dari model yang sudah kita buat bisa kita lihat dengan menggunakan fungsi predict dari model yang sudah kita buat.
+
+```python
+y_prediksi = mlp.predict(X_test)
+```
+
+Dengan menggunakan sklearn.metrics, kita bisa menghitung akurasi dari model yang sudah kita buat.
+
+```python
+import sklearn.metrics as met
+print(met.classification_report(y_test, y_prediksi))
+```
+
+![akurasi](metrics.png "Akurasi Data")
+
+Dari hasil di atas angka _precision_ class 0 bernilai 0,83 dan clas 1 bernilai 1. Angka _precision_ bisa berbeda-beda ketika dijalankan. Hal ini dikarenakan proses training menggunakan fungsi _random_. Jika kita ingin mendapatkan hasil yang sama, kita bisa menambahkan parameter _random_state_ pada fungsi train_test_split.
+
+Hasil yang lebih tinggi bisa didapatkan dengan menambahkan _hidden layer_ dan iterasi maksimal. Namun, semakin banyak _hidden layer_ dan iterasi maksimal, maka proses training akan semakin lama. Untuk itu, kita perlu mencari kombinasi yang tepat antara jumlah _hidden layer_ dan iterasi maksimal.
+
+Untuk mengurangi model _overvit_, kita harus memastikan _training dataset_ kita cukup besar dan membatasi jumlah _hidden layer_.
+
+
+```python
