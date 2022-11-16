@@ -41,6 +41,7 @@ flowchart LR
 
     id7 --> output
 ```
+
 Jumlah _Hiden Layer_ bergantung pada seberapa kopmleks pembelajaran yang mau ditentukan. Semakin kompleks pembelajaran maka semakin banyak _hidden layer_ yang dibutuhkan. Jumlah _hidden layer_ juga bergantung pada jumlah _node_ yang ada di dalamnya. Semakin banyak _node_ maka semakin kompleks pembelajaran yang bisa dilakukan. Jumlah _node_ juga bergantung pada jumlah _feature_ yang ada. Semakin banyak _feature_ maka semakin banyak _node_ yang dibutuhkan. Jumlah _node_ juga bergantung pada jumlah _output_ yang diinginkan. Semakin banyak _output_ yang diinginkan maka semakin banyak _node_ yang dibutuhkan.
 
 > Deep Learning menggunakan Multi Layer Perceptron dengan jumlah _hidden layer_ yang sangat banyak. Jumlah _hidden layer_ yang banyak akan membuat pembelajaran menjadi lebih kompleks. Semakin kompleks pembelajaran maka semakin baik hasil prediksi yang dihasilkan.
@@ -57,4 +58,6 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 ```
+
 Metode ini bisa digunakan untuk klasifikasi dan regresi. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi _logistic_ untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi _identity_ untuk output layer. Untuk klasifikasi, MLPClassifier menggunakan fungsi aktivasi _logistic_ untuk output layer. Untuk regresi, MLPRegressor menggunakan fungsi aktivasi _identity_ untuk output layer.
+

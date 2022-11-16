@@ -1,9 +1,11 @@
 Dasar-Dasar Pandas
 =================
 Langkah pertama yang harus dilakukan yaitu mengimpor library pandas:
+
 ```python
     import pandas as pd
 ```
+
 Untuk mempermudah, kita akan menggunakan pd sebagai alias dari pandas.
 Konspep pandas yaitu menyimpan data yang disebut **Series** dan **DataFrame**. Series adalah kolom tunggal, sedangkan DataFrame adalah tabel yang terdiri dari beberapa kolom atau series.
 
@@ -36,6 +38,7 @@ Cara membuat DataFrame adalah dengan menggunakan dictionary:
 ```python
 df1 = pd.DataFrame({3,0,9}), columns=['apel'], index=[1,2,3])
 ```
+
 |  |apel  |
 |:-|:-|
 |1  |3  |
@@ -49,6 +52,7 @@ dict1= {'apel': [3, 0, 9],
         'jeruk': [1, 4, 2]}
 df1 = pd.DataFrame(dict1)
 ```
+
 |  |apel  |jeruk  |
 |:-|:-|:-|
 |0  |3  |1  |
@@ -62,6 +66,7 @@ Setelah DataFrame terbentuk kita bebas memanipulasinya.
     ```python
     df1.count()
     ```
+
     >Output
     >```jupyter
     >apel     3
