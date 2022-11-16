@@ -11,7 +11,7 @@ Jika menemukan kesalahan dalam penulisan kata atau ingin menambahkan konten baru
 
 #### Terima Kasih
 
-Contributor:
+Contributor: <br>
 <a href="https://github.com/BobChrismansyah/Docs-Machine-Learning/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=BobChrismansyah/Docs-Machine-Learning" />
 </a>
