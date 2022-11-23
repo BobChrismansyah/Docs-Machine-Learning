@@ -16,7 +16,7 @@ Apabila keduanya digabungkan maka _conditional propability_ dapat dihitung nilai
 
 <br>
 
-$P(sampah|"kredit) = \frac{P("kredit"|sampah)P(sampah)}{P("kredit")}$
+$P(sampah|"kredit") = \frac{P("kredit"|sampah)P(sampah)}{P("kredit")}$
 
 <br>
 
@@ -68,3 +68,70 @@ Langkah pertama dalam membuat model NB adalah mengubah data yang ada menjadi sua
     </tbody>
 </table>
 
+Selanjutnya membuat **tabel kemungkinan** berdasarkan tabel frekuensi untuk mengukur **likehood** atau kemungkinan kemunculan kata "Kredit"
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan="2" >Berisi kata kredit</th>
+            <th hidden ></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Pesan SMS</td>
+            <td>Ada</td>
+            <td>Tidak Ada</td>
+            <td>Jumlah</td>
+            <td>Kemungkinan</td>
+        </tr>
+        <tr>
+            <td>Sampah</td>
+            <td>8/30=0,27</td>
+            <td>22/30=0,73</td>
+            <td>30</td>
+            <td>0,3</td>
+        </tr>
+        <tr>
+            <td>Bukan Sampah</td>
+            <td>2/70=0,03</td>
+            <td>68/70=0,97</td>
+            <td>70</td>
+            <td>0,7</td>
+        </tr>
+        <tr>
+            <td>Kemungkinan</td>
+            <td>10/100=0,1</td>
+            <td>90/100=0,97</td>
+        </tr>
+    </tbody>
+<table>
+
+P("Kredit"|Sampah) = 0,27
+P(Sampah) = 0,3
+Kemungkinan kata "kredit" muncul di sluruh pesan SMS yaitu P("kredit") = 0,1
+
+Dengan menggunakan _posterior probability_ maka dapat dihitung nilai kemungkinan SMS dianggap sampah jika mengandung kata "kredit" yaitu P(Sampah|"kredit") = 0,27 * 0,3 / 0,1 = 0,81
+
+Nilainya _posterior probability_ yang tinggi sehingga bisa menentukan pesan apapun yang berisi kata "kredit" adalah pasti pesan sampah.
+
+##### Rumus Conditional Probability
+
+<!-- >$P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{P(B \cap A)}{P(B)}$ -->
+>Secara matematis:
+>
+>
+><span style="color:pink">$P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{P(B \cap A)}{P(B)}$</span>
+>
+>P(A) : kemungkinan A terjadi
+>P(A|B) : kemungkinan A terjadi jika B terjadi
+>P(B) : kemungkinan B terjadi
+>P(B|A) : kemungkinan B terjadi jika A terjadi
+>P(B ∩ A) : kemungkinan B dan A terjadi
+
+Scikit-learn menyediakan pilihan untuk membuat model NB dengan menggunakan metode Gaussian, Multinomial dan Bernoulli. Metode Gaussian digunakan untuk data yang berupa angka, sedangkan metode Multinomial digunakan untuk data yang berupa kata-kata dan metode Bernoulli digunakan untuk data yang berupa kata-kata yang bernilai 0 atau 1.
+
+##### kelebihan dan kekurangan
+
+Kelebihan NB adalah mudah untuk diimplementasikan dan memiliki performa yang baik. Namun, NB memiliki kekurangan yaitu tidak dapat mengklasifikasikan data yang tidak terdapat dalam data latih. Selain itu, NB juga tidak dapat mengklasifikasikan data yang memiliki nilai yang sama.
