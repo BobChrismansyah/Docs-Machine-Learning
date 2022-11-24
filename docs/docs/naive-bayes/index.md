@@ -7,6 +7,7 @@
 Keunggulan NB adalah efektif dan cepat sehingga NB bisa digunakan pada aplikasi _spam filtering_ dan deteksi anomali di jaringan komputer.
 
 #### Cara Kerja NB
+
 NB adalah sekumpulan algoritma klasifikasi yuang dibangun berdasarkan **Teori Bayes** (Thomas Bayes, seorang ahli matematika dari Inggris di abad ke-18). Prinsipnya adalah menghitung seberapa tinggi kemubgkinan satu example dalam suatu observasi untuk masuk ke dalam suatu kelas, dengan memanfaatkan _training dataset_ untuk menghitung kemungkinan setiap kelas berdasarkan nilai-nilai _feature_ di dalamnya.
 
 Dalam Statistik  teori ini dipakai untuk menjelaskan _**conditional probability**_, yaitu kemungkinan munculnya suatu kejadian A bila suatu kejadian B muncul, karena kejadian A bergantung pada kejadian B maka disebut _conditional_ atau bersyarat.
@@ -14,11 +15,7 @@ Dalam Statistik  teori ini dipakai untuk menjelaskan _**conditional probability*
 Sebagai contoh membuat model prediksi SMS termasuk pesan sampah atau bukan. Dalam kasus ini, _feature_ yang digunakan adalah kata-kata yang ada di dalam SMS. Dengan menggunakan teori Bayes, kita bisa menghitung kemungkinan SMS termasuk pesan sampah atau bukan dengan menghitung kemungkinan setiap kata-kata yang ada di dalam SMS termasuk pesan sampah atau bukan. Pesan sampah kebanyakan berisi kata "kredit" katakanlah jumlahnya 10% dari seluruh pesan SMS, lalu ditulis sebagai P("kredit") = 0,1. Lalu dari pengamatan sebelumnya diperoleh misalnya 30% dari seluruh pesan adalah pesan sampah, sehinggga ditulis P(sampah) = 0,3.
 Apabila keduanya digabungkan maka _conditional propability_ dapat dihitung nilainya, yang menunjukkan kemungkinan SMS dianggap sampah jika mengandung kata "kredit". Secara matematis dapat ditulis sebagai berikut:
 
-<br>
-
 $P(sampah|"kredit") = \frac{P("kredit"|sampah)P(sampah)}{P("kredit")}$
-
-<br>
 
 Apabila _posterior propability melampaui suatu ambang batas_, maka SMS dianggap sampah. Misalnya ambang batasnya adalah 0,5, maka SMS dianggap sampah apabila $P(sampah|"kredit") > 0,5$.
 
@@ -118,11 +115,10 @@ Nilainya _posterior probability_ yang tinggi sehingga bisa menentukan pesan apap
 
 ##### Rumus Conditional Probability
 
-<!-- >$P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{P(B \cap A)}{P(B)}$ -->
->Secara matematis:
 >
->
-><span style="color:pink">$P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{P(B \cap A)}{P(B)}$</span>
+
+Secara matematis:
+$P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{P(B \cap A)}{P(B)}$
 >
 >P(A) : kemungkinan A terjadi
 >P(A|B) : kemungkinan A terjadi jika B terjadi

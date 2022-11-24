@@ -1,5 +1,7 @@
 ### Open Project
 
+Slide is underconstruction
+
 Yang mau berkontribusi silahkan :)
 Menggunakan [MkDocs](www.mkdocs.org/)
 >clone
