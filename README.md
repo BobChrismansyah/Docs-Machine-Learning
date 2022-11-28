@@ -5,7 +5,7 @@ Slide is underconstruction
 Yang mau berkontribusi silahkan :)
 Menggunakan [MkDocs](www.mkdocs.org/)
 >clone
->>**git clone https://github.com/BobChrismansyah/Docs-Machine-Learning.git**
+>> **git clone https://github.com/BobChrismansyah/Docs-Machine-Learning.git**
 >
 >
 >> **cd Docs-Machine-Learning**
