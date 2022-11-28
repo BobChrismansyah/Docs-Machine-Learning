@@ -13,3 +13,5 @@ Menggunakan [MkDocs](www.mkdocs.org/)
 >run di local
 >> **mkdocs serve**
 >>> lalu buka di http://127.0.0.1:8000/
+
+> push ke main
