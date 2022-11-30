@@ -46,6 +46,8 @@ Within the download you'll find the following directories and files:
    |    |    |    |-- index.md
    |    |    |-- neural-network
    |    |    |    |-- index.md
+   |    |-- about.md
+   |    |-- index.md
    |-- img/                                # nothing
    |-- ipynb/                              # Directory for ipynb file
    |    |-- occupancy.ipynb                # A ipynb file for datatraining.csv dataset training
