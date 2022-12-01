@@ -10,11 +10,11 @@ Tris repository using [MkDocs](www.mkdocs.org/)
 >
 >> **cd Docs-Machine-Learning**
 >
->run di local
+>run local
 >> **mkdocs serve**
->>> lalu buka di http://127.0.0.1:8000/
+>>> open in http://127.0.0.1:8000/
 >
-> push ke main
+> push <pr-branch>
 
 <br>
 
@@ -53,8 +53,8 @@ Within the download you'll find the following directories and files:
    |    |-- occupancy.ipynb                # A ipynb file for datatraining.csv dataset training
    |-- theme/                              # Theme, ignore it
    |
-   |-- mkdocs.yml                           # Configuration for mkdocs
-   |-- requirements.txt                     # Development modules
+   |-- mkdocs.yml                          # Configuration for mkdocs
+   |-- requirements.txt                    # Development modules
    |
    |-- ************************************************************************
 ```
