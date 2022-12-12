@@ -11,3 +11,4 @@ mkdocs-minify-plugin
 mkdocs-redirects
 mkdocs-git-authors-plugin
 lxml
+python-markdown-math

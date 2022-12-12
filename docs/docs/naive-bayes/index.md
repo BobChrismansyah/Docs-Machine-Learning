@@ -23,91 +23,29 @@ Apabila _posterior propability melampaui suatu ambang batas_, maka SMS dianggap 
 
 Langkah pertama dalam membuat model NB adalah mengubah data yang ada menjadi suatu tabel frekuensi
 
-<style>
-    th:first-child {
-  opacity: 0;
-}
-</style>
-
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th colspan="2" >Berisi kata kredit</th>
-            <th hidden ></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Pesan SMS</td>
-            <td>Ada</td>
-            <td>Tidak Ada</td>
-            <td>Jumlah</td>   
-        </tr>
-        <tr>
-            <td>Sampah</td>
-            <td>8</td>
-            <td>22</td>
-            <td>30</td>
-        </tr>
-        <tr>
-            <td>Bukan Sampah</td>
-            <td>2</td>
-            <td>68</td>
-            <td>70</td>
-        </tr>
-        <tr>
-            <td>Jumlah</td>
-            <td>10</td>
-            <td>90</td>
-            <td>100</td>
-        </tr>
-    </tbody>
-</table>
+||Berisi Kata Kredit|||
+|---|---|---|---|
+|Pesan SMS|Ada|Tidak Ada|Jumlah|
+|Sampah|8|22|30|
+|Bukan Sampah|2|68|30|
+|Jumlah|10|90|100|
 
 Selanjutnya membuat **tabel kemungkinan** berdasarkan tabel frekuensi untuk mengukur **likehood** atau kemungkinan kemunculan kata "Kredit"
 
-<table>
-    <thead>
-        <tr>
-            <th></th>
-            <th colspan="2" >Berisi kata kredit</th>
-            <th hidden ></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Pesan SMS</td>
-            <td>Ada</td>
-            <td>Tidak Ada</td>
-            <td>Jumlah</td>
-            <td>Kemungkinan</td>
-        </tr>
-        <tr>
-            <td>Sampah</td>
-            <td>8/30=0,27</td>
-            <td>22/30=0,73</td>
-            <td>30</td>
-            <td>0,3</td>
-        </tr>
-        <tr>
-            <td>Bukan Sampah</td>
-            <td>2/70=0,03</td>
-            <td>68/70=0,97</td>
-            <td>70</td>
-            <td>0,7</td>
-        </tr>
-        <tr>
-            <td>Kemungkinan</td>
-            <td>10/100=0,1</td>
-            <td>90/100=0,97</td>
-        </tr>
-    </tbody>
-<table>
+||Berisi Kata Kredit||||
+|---|---|---|---|---|
+|Pesan SMS|Ada|Tidak Ada|Jumlah|Kemungkinan|
+|Sampah|8/30=0,27|22/30=0,73|30|0,3|
+|Bukan Sampah|2/70=0,03|68/70=0,97|70|0.7
+|Kemungkinan|10/100=0,1|90/100=0,9|||
 
 P("Kredit"|Sampah) = 0,27
+
 P(Sampah) = 0,3
-Kemungkinan kata "kredit" muncul di sluruh pesan SMS yaitu P("kredit") = 0,1
+
+Kemungkinan kata "kredit" muncul di sluruh pesan SMS yaitu 
+
+P("kredit") = 0,1
 
 Dengan menggunakan _posterior probability_ maka dapat dihitung nilai kemungkinan SMS dianggap sampah jika mengandung kata "kredit" yaitu P(Sampah|"kredit") = 0,27 * 0,3 / 0,1 = 0,81
 
@@ -115,11 +53,11 @@ Nilainya _posterior probability_ yang tinggi sehingga bisa menentukan pesan apap
 
 ##### Rumus Conditional Probability
 
->
-
 Secara matematis:
+
 $P(A|B) = \frac{P(B|A)P(A)}{P(B)} = \frac{P(B \cap A)}{P(B)}$
->
+
+Dengan:
 >P(A) : kemungkinan A terjadi
 >P(A|B) : kemungkinan A terjadi jika B terjadi
 >P(B) : kemungkinan B terjadi
