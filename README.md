@@ -44,8 +44,9 @@ Within the download you'll find the following directories and files:
    |    |    |    |-- index.md
    |    |    |-- neural-network
    |    |    |    |-- index.md
-   |    |    |-- neural-network
+   |    |    |-- pandas
    |    |    |    |-- index.md
+   |    |    |-- index.md
    |    |-- about.md
    |    |-- index.md
    |-- img/                                # nothing
