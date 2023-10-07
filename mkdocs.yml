@@ -14,6 +14,7 @@ nav:
         - Decision Tree: docs/decision-tree/index.md
         - Clustering: docs/clustering/index.md
         - Churn Prediction: docs/churn-prediction/index.md
+        - Catatan: docs/catatan/index.md
         
 # Repository
 repo_name: Docs-Machine-Learning
