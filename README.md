@@ -2,25 +2,37 @@
 
 Slide is underconstruction
 
-Open to contribute if you want
-Tris repository using [MkDocs](www.mkdocs.org/)
->clone
->> **git clone https://github.com/BobChrismansyah/Docs-Machine-Learning.git**
->
->
->> **cd Docs-Machine-Learning**
->
->run local
->> **mkdocs serve**
->>> open in http://127.0.0.1:8000/
->
-> push <pr-branch>
+
+Repositori ini dibuat menggunakan [MkDocs](www.mkdocs.org/) dengan bantuan 
+
+langkah langkah menjalankan di lokal
+
+
+```
+git clone https://github.com/BobChrismansyah/Docs-Machine-Learning.git
+```
+
+```
+cd Docs-Machine-Learning
+```
+
+```
+pip install -r requirements.txt
+```
+
+
+
+run:
+```
+mkdocs serve
+```
+
+>open in http://127.0.0.1:8000/
 
 <br>
 
 ### File Strucure
 
-Within the download you'll find the following directories and files:
 
 ```bash
 < PROJECT ROOT >
