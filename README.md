@@ -3,9 +3,9 @@
 Slide is underconstruction
 
 
-Repositori ini dibuat menggunakan [MkDocs](www.mkdocs.org/) dengan bantuan 
+Repositori ini dibuat menggunakan [MkDocs](www.mkdocs.org/) dengan bantuan  Sepuh <a href = https://github.com/mdswa>Memet Zx</a>, Thx..
 
-langkah langkah menjalankan di lokal
+Langkah langkah menjalankan di lokal
 
 
 ```
